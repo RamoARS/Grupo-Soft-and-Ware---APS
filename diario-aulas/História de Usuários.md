@@ -396,3 +396,35 @@
 > Dado que o livro foi devolvido danificado  
 > Quando o funcionário responsável avaliar o dano  
 > Então o sistema deve permitir informar valor da multa e gerar pendência para o usuário que devolveu o livro danificado
+
+---
+
+## Relatórios
+
+**Como** funcionário  
+**Quero** consultar os relatórios do sistema  
+**Para** controle de inventário e planejamento
+
+> Dado que o funcionário abre a área de relatórios  
+> Quando precisar verificar algum relatório  
+> Então o sistema deve exibir para escolha os relatórios de Livros mais emprestados, Usuários com multa em aberto, Histórico de empréstimo, Acervo Disponível vs Emprestado, Empréstimo em atraso. Todos em PDF e Excel, permitindo escolher o período de tempo dos dados
+
+> Dado que o sistema permita a geração de relatórios  
+> Quando selecionado o relatório de Livros mais emprestados  
+> Então o sistema deve exibir os livros mais emprestados tendo: título, autor, ISBN, categoria, quantidade no período, filtro por período e categoria
+
+> Dado que o sistema permita a geração de relatórios  
+> Quando selecionado o relatório de usuários com multa em aberto  
+> Então o sistema deve exibir os usuários tendo: nome, CPF, perfil, valor total e filtro por perfil
+
+> Dado que o sistema permita a geração de relatórios  
+> Quando selecionado o relatório de histórico de empréstimo  
+> Então o sistema deve exibir o histórico de empréstimo tendo: usuário obrigatório, período opcional, datas e status
+
+> Dado que o sistema permita a geração de relatórios  
+> Quando selecionado o relatório de Acervo Disponível vs Emprestado  
+> Então o sistema exibe o relatório de Acervo Disponível vs Emprestado tendo: título, quantidade total e disponível
+
+> Dado que o sistema permita a geração de relatórios  
+> Quando selecionado o relatório de Livros mais emprestados  
+> Então o sistema deve exibir os Empréstimos em Atraso tendo: nome, CPF, título, dias em atraso, multa acumulada
