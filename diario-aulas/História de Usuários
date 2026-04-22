@@ -1,5 +1,21 @@
 # Histórias de Usuário
-### Grupo Soft and Ware
+### Aula 8 — 08/04/2026
+
+---
+
+## Login
+
+**Como** administrador do sistema  
+**Quero** acessar o sistema com minha conta exclusiva  
+**Para** que minhas ações sejam registradas e eu tenha as permissões necessárias para operar a plataforma
+
+> Dado que eu sou um administrador cadastrado e estou na página de login  
+> Quando eu insiro meu e-mail e senha válidos e clico no botão "Entrar"  
+> Então o sistema deve autenticar minhas credenciais
+
+> Dado que estou na página de login  
+> Quando eu insiro um usuário válido, mas uma senha incorreta  
+> Então o sistema deve exibir a mensagem de erro: "Usuário ou senha inválidos"
 
 ---
 
@@ -9,79 +25,25 @@
 **Quero** realizar o cadastro de um usuário não registrado no sistema  
 **Para** que ele possua um registro no sistema
 
+> Dado que é necessário verificar se o aluno já possui conta  
+> Quando for realizar o cadastro do aluno  
+> Então o sistema deve disponibilizar uma sessão de busca por Nome, CPF e Tipo
+
 > Dado que todas as contas de usuário possuem informações cadastrais  
 > Quando a atendente for efetivar o cadastro  
 > Então o sistema deve solicitar as seguintes informações: nome completo, CPF, email, telefone, RA e vínculo institucional
+
+> Dado que o cadastro precisa do CPF  
+> Quando for inserido um CPF inválido  
+> Então o sistema avisa que o CPF está inválido
 
 > Dado que o cadastro do usuário for efetivado e verificado pelo sistema  
 > Quando realizado pela atendente  
 > Então o sistema deve registrar a data de cadastro e o status "Ativo" do usuário
 
----
-
-## Níveis de Acesso
-
-### Estagiária
-
-**Como** estagiária  
-**Quero** realizar todas as minhas funções  
-**Para** fazer o atendimento completo aos alunos
-
-> Dado que o aluno solicita um empréstimo  
-> Quando for efetivado o empréstimo ao usuário solicitante  
-> Então o sistema deve realizar o empréstimo e relacionar o empréstimo ao usuário
-
-> Dado que o aluno faça a devolução de um livro  
-> Quando for requerida a devolução no sistema  
-> Então o sistema deve atualizar o acervo e registrar a devolução ao usuário
-
-> Dado que o aluno solicite a reserva de um livro  
-> Quando for cadastrada a reserva e associada ao usuário solicitante  
-> Então o sistema deve registrar a reserva e notificar o aluno
-
-> Dado que o aluno solicite uma consulta no acervo  
-> Quando entrar na sessão de consulta  
-> Então o sistema deve apresentar o acervo sendo possível filtrar por título parcial, autor, código de tombo, categoria e disponibilidade
-
-> Dado que reservas foram cadastradas  
-> Quando for verificada a reserva  
-> Então o sistema deve mostrar a lista de reservas
-
----
-
-### Atendente Sênior
-
-**Como** Atendente Sênior  
-**Quero** efetivar o pagamento das multas e cancelar reservas  
-**Para** fazer o gerenciamento financeiro e organizacional
-
-> Dado que o aluno realize o pagamento das multas  
-> Quando for constatado um atraso ou danificação  
-> Então o sistema deve remover o bloqueio da conta por multa
-
-> Dado que o aluno havia realizado uma reserva  
-> Quando analisado o caso ou solicitado pelo aluno  
-> Então o sistema deve cancelar a reserva e ceder o lugar para o próximo da lista (se houver)
-
----
-
-### Bibliotecária Chefe
-
-**Como** Bibliotecária Chefe  
-**Quero** realizar funções administrativas e importantes  
-**Para** manter o gerenciamento funcional do sistema
-
-> Dado que quero realizar o cadastro de um livro  
-> Quando for organizar o acervo online  
-> Então o sistema deve efetivar o cadastro no acervo
-
-> Dado que quero configurar o sistema  
-> Quando for necessário reparos ou modificações  
-> Então o sistema deve salvar as novas configurações
-
-> Dado que quero acessar os relatórios  
-> Quando necessitar para analisar dados  
-> Então o sistema deve apresentar os relatórios em PDF e Excel
+> Dado que foi inserido informações erradas na conta  
+> Quando foi realizado o cadastro do aluno  
+> Então o sistema deve disponibilizar uma opção de editar conta, para alterar suas informações cadastrais
 
 ---
 
@@ -93,7 +55,7 @@
 
 > Dado que todos os livros possuem informações de cadastro  
 > Quando for iniciado um novo registro  
-> Então o sistema deve solicitar as seguintes informações: título, autor, editora, ano, ISBN, categoria, código de tombo e condição de conservação do primeiro exemplar, e opcionalmente uma imagem do livro
+> Então o sistema deve solicitar as seguintes informações: título, autor, editora, ano, ISBN, categoria, o código de tombo e a condição de conservação do primeiro exemplar e opcionalmente uma imagem do livro
 
 ---
 
@@ -103,7 +65,7 @@
 
 > Dado que o livro já está cadastrado  
 > Quando a opção de editar livro for acessada  
-> Então o sistema deve permitir a alteração das seguintes informações: título, autor, editora, ano, ISBN, categoria e imagem do livro
+> Então o sistema deve permitir a alteração das seguintes informações: título, autor, editora, ano, ISBN, categoria e a imagem do livro
 
 > Dado que alguns livros possuem mais de um exemplar  
 > Quando a área de exemplares for acessada  
@@ -125,7 +87,7 @@
 
 > Dado que o aluno escolhe um exemplar de um livro disponível no acervo  
 > Quando ele executa o empréstimo  
-> Então o sistema muda o status para emprestado, associa ao aluno e exibe a data de devolução calculada para 7 dias após o empréstimo
+> Então o sistema muda seus status para emprestado, associa ao aluno e exibe a data de devolução calculada para 7 dias após o empréstimo
 
 > Dado que o aluno escolha um livro sem exemplares disponíveis  
 > Quando ele busca por um exemplar  
@@ -165,7 +127,7 @@
 
 > Dado que o funcionário escolhe um exemplar de um livro disponível no acervo  
 > Quando ele executa o empréstimo  
-> Então o sistema muda o status para emprestado, associa ao funcionário e exibe a data de devolução calculada para 10 dias após o empréstimo
+> Então o sistema muda seus status para emprestado, associa ao funcionário e exibe a data de devolução calculada para 10 dias após o empréstimo
 
 ---
 
@@ -175,9 +137,9 @@
 **Quero** fazer um empréstimo  
 **Para** preparar uma aula
 
-> Dado que o professor escolhe um exemplar de um livro disponível no acervo  
+> Dado que o professor escolhe um exemplar de um livro livre no acervo  
 > Quando ele executa o empréstimo  
-> Então o sistema muda o status para emprestado, associa ao professor e exibe a data de devolução calculada para 15 dias após o empréstimo
+> Então o sistema muda seus status para emprestado, associa ao professor e exibe a data de devolução calculada para 15 dias após o empréstimo
 
 > Dado que o professor tente emprestar um livro  
 > Quando ele já emprestou 5 livros simultâneos  
@@ -193,7 +155,7 @@
 
 > Dado que o diretor escolhe um exemplar de um livro disponível no acervo  
 > Quando ele executa o empréstimo  
-> Então o sistema muda o status para emprestado, associa ao diretor, mas não impõe uma data de devolução limite por conta do seu cargo
+> Então o sistema muda seus status para emprestado, associa ao diretor, mas não impõe uma data de devolução limite por conta do seu cargo
 
 > Dado que o diretor tente emprestar um livro  
 > Quando ele já tem 2 ou mais livros emprestados  
@@ -211,15 +173,15 @@
 
 > Dado que o aluno devolve o exemplar emprestado  
 > Quando o exemplar volta ao acervo  
-> Então o sistema altera o status do exemplar para disponível e desassocia do aluno
+> Então o sistema altera o status do exemplar para disponível e desassocia ao aluno
 
 > Dado que o aluno devolva um exemplar emprestado  
 > Quando o sistema confirmar a devolução  
-> Então o sistema imprime um comprovante de devolução e envia ao e-mail do aluno
+> Então o sistema imprime um comprovante de devolução e envie ele ao e mail do aluno
 
 > Dado que o aluno devolve um exemplar danificado  
 > Quando o funcionário indicar que o exemplar está danificado  
-> Então o sistema salva que aquele exemplar está danificado e registra o aluno que danificou
+> Então o sistema salva que aquele exemplar está danificado e o aluno que danificou
 
 > Dado que o aluno devolve um livro  
 > Quando esse exemplar possuir uma reserva ativa  
@@ -239,11 +201,11 @@
 
 **Como** funcionário  
 **Quero** fazer o processo de devolução  
-**Para** devolver um livro emprestado à biblioteca
+**Para** devolver um livro emprestado a biblioteca
 
 > Dado que o funcionário queira realizar a devolução  
 > Quando for pesquisar o livro no sistema  
-> Então o sistema deve permitir pesquisar pelo código de tombo
+> Então o sistema deve permitir pesquisar pelo seu código de tombo
 
 ---
 
@@ -315,19 +277,19 @@
 
 > Dado que o livro fica disponível no sistema  
 > Quando há uma reserva para ele  
-> Então o sistema deve notificar por e-mail o primeiro usuário na fila de reservas, informando a disponibilidade do livro
+> Então o sistema deve notificar por email o primeiro usuário na fila de reservas, informando a disponibilidade do livro - Devolução
 
-> Dado que o aluno foi notificado por e-mail sobre a disponibilidade de um livro reservado  
+> Dado que o aluno foi notificado por email sobre a disponibilidade de um livro reservado - Devolução  
 > Quando a notificação é enviada  
-> Então o aluno que reservou possui 3 dias para buscá-lo, antes da reserva expirar
+> Então o aluno que reservou possui 3 dias para buscá-lo, antes da reserva expirar - Devolução
 
 > Dado que o aluno não buscou o livro  
 > Quando já passaram os 3 dias  
-> Então o próximo aluno da fila é notificado
+> Então o próximo aluno da fila é notificado - Empréstimo
 
 > Dado que o aluno tente realizar uma reserva  
 > Quando ele já possui 2 reservas ativas de diferentes livros  
-> Então o sistema deve informar que o número máximo de reservas já foi atingido
+> Então o sistema deve informar que o número máximo de reservas já foi atingido - Empréstimo
 
 ---
 
@@ -339,7 +301,7 @@
 
 > Dado que o funcionário tente realizar uma reserva  
 > Quando já possui 3 reservas ativas de diferentes livros  
-> Então o sistema deve informar que o número máximo de reservas já foi atingido
+> Então o sistema deve informar que o número máximo de reservas já foi atingido - Empréstimo
 
 ---
 
@@ -351,7 +313,7 @@
 
 > Dado que o livro fica disponível no sistema  
 > Quando há reservas para ele que não foram feitas por outros professores  
-> Então o professor pode emprestá-lo, independente da fila de reservas
+> Então o professor pode emprestá-lo, independente da fila de reservas - Empréstimo
 
 > Dado que o professor tente realizar uma reserva  
 > Quando já possui 5 reservas ativas de diferentes livros  
@@ -369,7 +331,7 @@
 
 > Dado que o aluno possua um livro emprestado  
 > Quando não realizar a devolução conforme a data informada  
-> Então o sistema deve calcular a multa de R$1,00 por dia de atraso e registrar o status *Bloqueado*
+> Então o sistema deve calcular a multa R$1,00 por dia de atraso e registrar o status *Bloqueado*
 
 > Dado que o aluno possui multa pendente  
 > Quando tentar realizar um empréstimo  
@@ -378,6 +340,10 @@
 > Dado que o aluno possui multa pendente  
 > Quando tentar realizar uma reserva  
 > Então o sistema bloqueará a operação e informará a multa pendente
+
+> Dado que vários alunos possuem pendências  
+> Quando for verificado na sessão de atrasos e pendências  
+> Então o sistema deve apresentar um botão de exibir que apresente a lista completa de alunos com pendências
 
 ---
 
@@ -389,11 +355,11 @@
 
 > Dado que o aluno foi bloqueado por uma pendência  
 > Quando o bloqueio for aplicado  
-> Então o usuário deverá ser notificado por e-mail
+> Então o usuário deverá ser notificado por email
 
 > Dado que o aluno possui um empréstimo com data vencida  
 > Quando se passar 1 dia do último aviso de vencimento  
-> Então o sistema deve enviar um e-mail com: nome do livro, data de vencimento, quantos dias de atraso e valor da multa acumulada
+> Então o sistema deve enviar um email com: nome do livro, data de vencimento, quantos dias de atraso e valor da multa acumulada
 
 ---
 
@@ -403,9 +369,9 @@
 **Quero** registrar pagamento da multa  
 **Para** remover pendência do usuário
 
-> Dado que o usuário possui multa  
+> Dado que o usuário possui multa em dinheiro  
 > Quando o operador registrar pagamento  
-> Então o sistema deve registrar o meio de pagamento, salvar o funcionário, data e hora e remover o bloqueio do usuário
+> Então o sistema deve registrar o meio de pagamento, salvar o funcionário, data e hora e remover o bloqueio de usuário
 
 ---
 
@@ -429,4 +395,4 @@
 
 > Dado que o livro foi devolvido danificado  
 > Quando o funcionário responsável avaliar o dano  
-> Então o sistema deve permitir informar o valor da multa e gerar pendência para o usuário que devolveu o livro danificado
+> Então o sistema deve permitir informar valor da multa e gerar pendência para o usuário que devolveu o livro danificado
