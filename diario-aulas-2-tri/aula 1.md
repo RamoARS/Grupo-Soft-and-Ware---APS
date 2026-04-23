@@ -1,4 +1,4 @@
-Equipe Powered by AI
+Equipe Powered by AI -
 Arthur Ramo da Silva e Iolanda Stange Goldoni
 
 Tema escolhido:
